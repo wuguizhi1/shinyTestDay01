@@ -9,6 +9,8 @@ shinyUI(pageWithSidebar(
   # Sidebar with controls to select a dataset and specify the number
   # of observations to view
   sidebarPanel(
+    textInput("caption", "Caption:", "Data Summary"),
+    
     selectInput("dataset", "Choose a dataset:", 
                 choices = c("rock", "pressure", "cars")),
 
@@ -18,6 +20,8 @@ shinyUI(pageWithSidebar(
   # Show a summary of the dataset and an HTML table with the requested
   # number of observations
   mainPanel(
+    h3(textOutput("caption")), 
+    
     verbatimTextOutput("summary"),
 
     tableOutput("view")
