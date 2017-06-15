@@ -14,6 +14,6 @@ shinyUI(pageWithSidebar(
   mainPanel(
     plotOutput("summary"),
 
-    tableOutput("view")
+ #   tableOutput("view")
   )
 ))
