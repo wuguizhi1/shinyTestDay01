@@ -3,7 +3,7 @@ library(ggplot2)
 
 shinyServer(function(input, output) {    
   datasetInput <- reactive({    
-    switch(input$dataset,           
+    switch(input$plotType,           
       "point" = point,           
       "smooth" = smooth,           
       "boxplot" = boxplot,           
