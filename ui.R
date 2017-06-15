@@ -12,7 +12,7 @@ shinyUI(pageWithSidebar(
   ),
 
   mainPanel(
-    plotOutput("summary"),
+    plotOutput("summary")#,
 
  #   tableOutput("view")
   )
