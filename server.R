@@ -11,7 +11,11 @@ shinyServer(function(input, output) {
            "pressure" = pressure,
            "cars" = cars)
   })
-
+  
+  output$caption <- renderText({
+    input$caption
+  })
+  
   # Generate a summary of the dataset
   output$summary <- renderPrint({
     dataset <- datasetInput()
